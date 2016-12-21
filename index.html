@@ -10,9 +10,11 @@
 <body ng-app="frameYoutube">
 	<div ng-controller="videoController">
 		<input ng-model="youtubeLink">
-		<button ng-click="playVideo()">play</button>
+		<button ng-click="playVideo()">Play</button>
+		<button ng-click="youtubeLink = ''">Clear</button>
+
 		<div class="embed-container">
-			<iframe class="video" ng-src="{{youtubeId | trustUrl}}" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen>
+			<iframe class="video" ng-src="{{youtubeIframe | trustUrl}}" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen>
 			</iframe>
 		</div>
 	</div>
@@ -20,8 +22,4 @@
 </body>
 </html>
 
-<style>
-input{ margin-bottom: 40px; }
-.embed-container { position: relative; padding-bottom: 56.25%;  overflow: hidden; max-width: 80%; height: auto; } 
-.embed-container iframe, .embed-container object, .embed-container embed { position: absolute;width: 100%; height: 80%; }
-</style>
+<link rel="stylesheet" type="text/css" href="style.css">

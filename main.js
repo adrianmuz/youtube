@@ -1,11 +1,11 @@
 var youtubeapp = angular.module('frameYoutube', []);
 
 youtubeapp.controller('videoController', function($scope){
-  $scope.youtubeLink = 'j';
-  $scope.youtubeId = '';
+  $scope.youtubeLink = '';
+  $scope.youtubeIframe = '';
 
   $scope.playVideo = function(){
-    $scope.youtubeId = "https://www.youtube.com/embed/"+parseYouTubeId($scope.youtubeLink)+"?autoplay=true";
+    $scope.youtubeIframe = "https://www.youtube.com/embed/"+parseYouTubeId($scope.youtubeLink)+"?autoplay=true";
   }
 
 });

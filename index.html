@@ -9,8 +9,7 @@
 </head>
 <body ng-app="frameYoutube">
 	<div ng-controller="videoController">
-		<input ng-model="youtubeLink">
-		<button ng-click="playVideo()">Play</button>
+		<input ng-change="playVideo()" ng-model="youtubeLink">
 		<button ng-click="youtubeLink = ''">Clear</button>
 
 		<div class="embed-container">
